@@ -1,0 +1,71 @@
+/* Tailwind CSS imports */
+@import "tailwindcss";
+
+:root {
+  --background-color: #E8EEF2; /* Alice Blue */
+  --card-color: #C7D3DD; /* Pale Sky */
+  --primary-accent: #77B6EA; /* Cool Sky */
+  --secondary-accent: #D6C9C9; /* Dust Grey */
+}
+
+body {
+  background-color: var(--background-color);
+  color: #333;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Add custom styles */
+.card {
+  background-color: var(--card-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.button-primary {
+  background: linear-gradient(to right, var(--primary-accent), var(--secondary-accent));
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.button-primary:hover {
+  transform: scale(1.05);
+}
+
+.input {
+  background-color: white;
+  border: 1px solid var(--secondary-accent);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.input:focus {
+  box-shadow: 0 0 0 2px var(--primary-accent);
+}
+
+.category-button {
+  border: 1px solid var(--secondary-accent);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-button:hover {
+  transform: scale(1.05);
+}
+
+.category-button.selected {
+  background-color: var(--primary-accent);
+  color: white;
+  box-shadow: 0 0 10px var(--primary-accent);
+}
