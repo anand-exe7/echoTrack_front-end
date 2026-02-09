@@ -1,6 +1,28 @@
+import { useEffect, useRef, useState } from "react";
+
 export default function Hero() {
+  const heroRef = useRef(null);
+  const [showScroll, setShowScroll] = useState(true);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowScroll(entry.isIntersecting);
+      },
+      {
+        threshold: 0.6, // hero must be ~60% visible
+      }
+    );
+
+    if (heroRef.current) {
+      observer.observe(heroRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="hero" className="section hero">
+    <section ref={heroRef} id="hero" className="section hero">
       <div>
         <h1>
           See effort
@@ -25,7 +47,6 @@ export default function Hero() {
           Small effort, repeated calmly, compounds into meaningful growth.
         </p>
 
-        {/* Animated Graph */}
         <div
           style={{
             marginTop: "24px",
@@ -64,7 +85,15 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Inline keyframes (scoped, no global mess) */}
+      {/* Scroll Indicator */}
+      <div className={`scroll-indicator ${!showScroll ? "hide" : ""}`}>
+        <div className="mouse">
+          <span className="wheel" />
+        </div>
+        <span className="scroll-text">Scroll To Discover</span>
+      </div>
+
+      {/* Inline keyframes */}
       <style>{`
         @keyframes drawLine {
           to {
