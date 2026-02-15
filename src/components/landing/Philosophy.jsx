@@ -6,7 +6,7 @@ export default function Philosophy() {
       <div className="max-w-[820px] mx-auto">
 
         <h1 className="text-[2.6rem] font-bold mb-2
-                       bg-gradient-to-r from-purple-600 via-indigo-500 to-purple-600
+                       bg-gradient-to-r from-[#31572C] via-[#4F772D] to-[#31572C]
                        bg-clip-text text-transparent">
           Growth is not content.
         </h1>
@@ -15,7 +15,7 @@ export default function Philosophy() {
           It doesn’t need likes, streaks, or validation.
         </p>
 
-        <div className="w-[60px] h-[4px] bg-gradient-to-br from-indigo-600 to-purple-400 rounded-full mx-auto mb-8" />
+        <div className="w-[60px] h-[4px] bg-gradient-to-br from-[#4F772D] to-[#90A955] rounded-full mx-auto mb-8" />
 
         <p className="text-[1.05rem] leading-8 text-gray-700">
           EchoTrack is built for people who care about becoming better —

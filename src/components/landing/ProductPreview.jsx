@@ -4,7 +4,7 @@ const CardContent = ({ text }) => {
   return (
     <div
       className="w-full h-full flex items-center justify-center
-                 text-indigo-700 font-bold text-[1.2rem]
+                 text-[#4F772D] font-bold text-[1.2rem]
                  text-center px-6 leading-6"
     >
       {text}
@@ -21,7 +21,7 @@ export default function ProductPreview() {
         <div className="max-w-[420px]">
 
           {/* Minimal Label (Now aligned left) */}
-          <span className="text-xs tracking-[0.25em] uppercase text-indigo-500">
+          <span className="text-xs tracking-[0.25em] uppercase text-[#4F772D]">
             A Clearer View
           </span>
 
@@ -43,11 +43,11 @@ export default function ProductPreview() {
 
           <button
             className="bg-gradient-to-br
-                       from-indigo-500 to-purple-500
-                       hover:from-indigo-700 hover:to-purple-700
+                       from-[#4F772D] to-[#90A955]
+                       hover:from-[#31572C] hover:to-[#4F772D]
                        text-white font-semibold text-[1rem]
                        px-6 py-3 rounded-full
-                       shadow-lg shadow-indigo-300/40
+                       shadow-lg shadow-[#4F772D]/40
                        transition-all duration-300"
           >
             Explore the product →
@@ -58,9 +58,9 @@ export default function ProductPreview() {
         <div className="flex justify-center">
           <Folder
             size={2.2}
-            color="#6D4AFF"
+            color="#ECF39E   "
             items={[
-              <CardContent text="Daily Reflection 💜" />,
+              <CardContent text="Daily Reflection 🌿" />,
               <CardContent text="Weekly Growth Insights" />,
               <CardContent text="Progress Summary Overview" />,
             ]}

@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-6 left-0 w-full z-50 px-8">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="max-w-7xl mx-auto flex items-center justify-between rounded-full bg-white/10 backdrop-blur-lg border border-white/20 px-8 py-3 shadow-lg shadow-[#4F772D]/5 border-[#90A955]">
 
         {/* LEFT — LOGO */}
         <div
@@ -28,7 +28,7 @@ export default function Navbar() {
           className="
             cursor-pointer
             text-xl font-bold
-            bg-gradient-to-bl from-purple-400 to-indigo-600
+            bg-gradient-to-bl from-[#4F772D] to-[#31572C]
             bg-clip-text text-transparent
           "
         >
@@ -41,8 +41,9 @@ export default function Navbar() {
           items-center gap-2
           px-2 py-2
           rounded-full
-          bg-white/80 backdrop-blur-xl
-          shadow-lg shadow-slate-900/10
+          bg-white/10 backdrop-blur-md
+          border border-[#132A13 ]
+          shadow-lg shadow-[#31572C ]/5
         ">
           {navItems.map((item) => (
             <button
@@ -53,8 +54,8 @@ export default function Navbar() {
                 transition-all duration-300
                 ${
                   active === item.id
-                    ? "bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md"
-                    : "text-slate-600 hover:bg-indigo-50 hover:text-indigo-600"
+                    ? "bg-gradient-to-r from-[#4F772D] to-[#90A955] text-white shadow-md"
+                    : "text-slate-700 hover:bg-black/10 hover:text-[#31572C]"
                 }
               `}
             >
@@ -72,17 +73,17 @@ export default function Navbar() {
               flex items-center gap-2
               px-4 py-2 rounded-full
               text-sm font-medium
-              bg-white/70 backdrop-blur-md
-              text-slate-700
-              border border-slate-200
-              hover:bg-indigo-50
-              hover:text-indigo-600
+              bg-white/20 backdrop-blur-md
+              text-[#4F772D]
+              border border-white/30
+              hover:bg-white/30
+              hover:border-white/40
               transition-all duration-300
             "
           >
             <User
               size={18}
-              className="text-indigo-600"
+              className="text-[#4F772D]"
             />
             Login
           </button>
@@ -92,9 +93,9 @@ export default function Navbar() {
             className="
               px-5 py-2 rounded-full
               text-sm font-semibold text-white
-              bg-gradient-to-r from-indigo-500 to-purple-500
-              hover:from-indigo-700 hover:to-purple-700
-              shadow-md hover:shadow-lg
+              bg-gradient-to-r from-[#4F772D] to-[#90A955]
+              hover:from-[#31572C] hover:to-[#4F772D]
+              shadow-lg shadow-[#4F772D]/30 hover:shadow-xl hover:shadow-[#4F772D]/40
               transition-all duration-300
             "
           >

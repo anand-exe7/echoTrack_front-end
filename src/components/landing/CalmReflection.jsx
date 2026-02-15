@@ -3,13 +3,13 @@ export default function CalmReflection() {
     <section className="py-32 px-[8%] text-center">
       <div className="max-w-[900px] mx-auto">
 
-        <span className="text-xs tracking-[0.25em] uppercase text-indigo-500">
+        <span className="text-xs tracking-[0.25em] uppercase text-[#4F772D]">
           A Calmer System
         </span>
 
         <h2 className="mt-6 text-[clamp(2.4rem,4vw,3.2rem)] font-semibold text-slate-900 leading-tight">
           Growth deserves reflection,{" "}
-          <span className="bg-gradient-to-br from-purple-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-br from-[#31572C] via-[#4F772D] to-[#31572C] bg-clip-text text-transparent">
             not pressure.
           </span>
         </h2>
@@ -22,11 +22,11 @@ export default function CalmReflection() {
         <button
           className="mt-10
                      bg-gradient-to-br
-                     from-indigo-600 to-purple-500
-                     hover:from-indigo-700 hover:to-purple-600
+                     from-[#4F772D] to-[#31572C]
+                     hover:from-[#31572C] hover:to-[#132A13]
                      text-white font-semibold
                      px-8 py-4 rounded-full
-                     shadow-lg shadow-indigo-300/40
+                     shadow-lg shadow-[#4F772D]/40
                      transition-all duration-300"
         >
           Start your EchoTrack journey

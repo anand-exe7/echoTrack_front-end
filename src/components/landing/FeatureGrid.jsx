@@ -12,9 +12,9 @@ export default function FeatureGrid() {
           leading-[1.2]
           mb-4
           bg-gradient-to-r
-          from-purple-600
-          via-indigo-500
-          to-purple-500
+          from-[#31572C]
+          via-[#4F772D]
+          to-[#90A955]
           bg-clip-text
           text-transparent
         "

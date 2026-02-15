@@ -32,9 +32,9 @@ export default function WhyEchoTrack() {
             leading-[1.2]
             mb-4
             bg-gradient-to-br
-            from-purple-500
-            via-indigo-500
-            to-purple-400
+            from-[#4F772D]
+            via-[#90A955]
+            to-[#31572C]
             bg-clip-text
             text-transparent
           "
@@ -48,8 +48,8 @@ export default function WhyEchoTrack() {
             w-[44px] h-[3px]
             rounded-full
             bg-gradient-to-br
-            from-indigo-500
-            to-purple-600
+            from-[#4F772D]
+            to-[#90A955]
             opacity-80
             mb-6
           "
@@ -75,10 +75,10 @@ export default function WhyEchoTrack() {
             className="
               p-10
               rounded-2xl
-              border border-indigo-100/70
+              border border-[#ECF39E]/70
               bg-white/85
               backdrop-blur-lg
-              shadow-[0_18px_40px_-15px_rgba(99,102,241,0.15)]
+              shadow-[0_18px_40px_-15px_rgba(79,119,45,0.15)]
               transition-all duration-200
             "
           >
@@ -93,8 +93,8 @@ export default function WhyEchoTrack() {
                 rounded-full
                 mb-5
                 bg-gradient-to-b
-                from-indigo-600
-                to-purple-500
+                from-[#4F772D]
+                to-[#31572C]
                 text-white
                 opacity-90
               "
@@ -109,8 +109,8 @@ export default function WhyEchoTrack() {
                 font-semibold
                 mb-4
                 bg-gradient-to-r
-                from-indigo-500
-                to-purple-500
+                from-[#4F772D]
+                to-[#31572C]
                 bg-clip-text
                 text-transparent
               "
