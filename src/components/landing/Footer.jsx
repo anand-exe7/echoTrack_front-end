@@ -1,59 +1,41 @@
 export default function Footer() {
   return (
-    <footer style={styles.footer}>
-      <div style={styles.container}>
-        <div style={styles.left}>
-          <span style={styles.brand}>EchoTrack</span>
-          <p style={styles.tagline}>
+    <footer
+      className="py-14 px-[8%]
+                 bg-[linear-gradient(180deg,_#F6F7FF_0%,_#EEF0FF_100%)]
+                 border-t border-indigo-200/40"
+    >
+      <div
+        className="max-w-[1100px] mx-auto
+                   flex justify-between items-end
+                   flex-wrap gap-8"
+      >
+        {/* Left Side */}
+        <div className="flex flex-col gap-2">
+          <span
+            className="text-[1.2rem] font-semibold tracking-wide
+                       bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500
+                       bg-clip-text text-transparent"
+          >
+            EchoTrack
+          </span>
+
+          <p className="text-sm text-slate-500">
             Built for growth — not noise.
           </p>
         </div>
 
-        <div style={styles.right}>
+        {/* Right Side */}
+        <div className="flex gap-6 text-sm text-slate-500">
           <span>© 2026 EchoTrack</span>
-          <span>Privacy</span>
-          <span>Terms</span>
+          <span className="hover:text-slate-700 cursor-pointer">
+            Privacy
+          </span>
+          <span className="hover:text-slate-700 cursor-pointer">
+            Terms
+          </span>
         </div>
       </div>
     </footer>
   );
 }
-
-const styles = {
-  footer: {
-    padding: "3.5rem 8% 3rem",
-    background:
-      "linear-gradient(180deg, #F6F7FF 0%, #EEF0FF 100%)",
-    borderTop: "1px solid rgba(99,102,241,0.15)",
-  },
-  container: {
-    maxWidth: "1100px",
-    margin: "0 auto",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "flex-end",
-    flexWrap: "wrap",
-    gap: "2rem",
-  },
-  left: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "0.4rem",
-  },
-  brand: {
-    fontSize: "1.05rem",
-    fontWeight: 700,
-    color: "#4f46e5",
-    letterSpacing: "0.02em",
-  },
-  tagline: {
-    fontSize: "0.9rem",
-    color: "#64748b",
-  },
-  right: {
-    display: "flex",
-    gap: "1.6rem",
-    fontSize: "0.85rem",
-    color: "#64748b",
-  },
-};

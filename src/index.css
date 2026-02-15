@@ -1,36 +1,29 @@
-/* =====================
-   RESET
-===================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* =====================
-   BASE
-===================== */
+/* =========================================
+   Global Smooth Scroll
+========================================= */
 html {
   scroll-behavior: smooth;
 }
 
+/* =========================================
+   Body Base Styling
+========================================= */
 body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #0f172a;
-  overflow-x: hidden;
+  @apply font-jakarta text-slate-900 overflow-x-hidden;
+  min-height: 100vh;
   position: relative;
 
-  background: linear-gradient(
-    180deg,
-    #faf7ff 0%,
-    #f2ecff 45%,
-    #faf7ff 100%
-  );
+  /* Lavender base */
+  background-color: #F6F4FF;
 }
 
-/* =====================
-   GLOBAL GRID BACKGROUND
-===================== */
+/* =========================================
+   Global Lavender Grid Background
+========================================= */
 body::before {
   content: "";
   position: fixed;
@@ -39,221 +32,75 @@ body::before {
   pointer-events: none;
 
   background-image:
-    linear-gradient(rgba(180, 160, 220, 0.22) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(180, 160, 220, 0.22) 1px, transparent 1px);
+    linear-gradient(rgba(124, 58, 237, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.06) 1px, transparent 1px);
 
-  background-size: 40px 40px;
+  background-size: 32px 32px;
 }
 
-/* =====================
-   SECTIONS
-===================== */
-section,
-.section {
-  background: transparent !important;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 140px 32px;
-}
-
-/* =====================
-   NAVBAR
-===================== */
-.navbar {
-  position: fixed;
-  top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-  padding: 8px 20px;
-  border-radius: 999px;
-
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
-}
-
-.nav-logo {
-  font-size: 15px;
-  font-weight: 700;
-  color: #4e54c8;
-}
-
-.nav-links {
-  display: flex;
-  gap: 22px;
-}
-
-.nav-links button {
-  all: unset;
-  cursor: pointer;
-  font-size: 14px;
-  color: #64748b;
-  transition: color 0.15s ease;
-}
-
-.nav-links button:hover {
-  color: #334155;
-}
-
-.nav-cta {
-  all: unset;
-  cursor: pointer;
-  padding: 7px 14px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 600;
-  color: white;
-  background: #4e54c8;
-}
-
-.nav-cta:hover {
-  background: #3f45b5;
-}
-
-/* =====================
-   HERO
-===================== */
-.hero {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  align-items: center;
-  gap: 80px;
-}
-
-.hero h1 {
-  font-size: 64px;
-  line-height: 1.05;
-  margin-bottom: 24px;
-}
-
-.hero p {
-  font-size: 18px;
-  color: #475569;
-  max-width: 520px;
-}
-
-.hero-cta {
-  margin-top: 36px;
-}
-
-.hero-cta button {
-  background: #4e54c8;
-  color: white;
-  border: none;
-  padding: 14px 28px;
-  border-radius: 999px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.hero-cta button:hover {
-  background: #3f45b5;
-}
-
-/* =====================
-   SCROLL INDICATOR (FIXED)
-===================== */
-.scroll-indicator {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  opacity: 0.7;
-  pointer-events: none;
-
-  /* IMPORTANT */
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.scroll-indicator.hide {
-  opacity: 0;
-  transform: translateX(-50%) translateY(12px);
-}
-
-.scroll-text {
-  font-size: 12px;
-  color: #6b6f9c;
-}
-
-.mouse {
-  width: 22px;
-  height: 36px;
-  border: 2px solid #6b6f9c;
-  border-radius: 12px;
-  position: relative;
-}
-
-.wheel {
-  width: 4px;
-  height: 6px;
-  background: #6b6f9c;
-  border-radius: 2px;
-  position: absolute;
-  top: 6px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: scrollWheel 1.6s infinite ease-in-out;
-}
-
-@keyframes scrollWheel {
-  0% { opacity: 0; transform: translate(-50%, 0); }
-  30% { opacity: 1; }
-  60% { opacity: 0; transform: translate(-50%, 10px); }
-  100% { opacity: 0; }
-}
-
-/* =====================
-   CARDS
-===================== */
-.soft-card {
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 22px;
-  padding: 36px;
-  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
-}
-
-/* =====================
-   FOOTER
-===================== */
-.footer {
-  padding: 90px 32px;
-  margin-top: 120px;
-  background: linear-gradient(135deg, #e6ddff, #d9ccff, #e6ddff);
-}
-
-/* =====================
-   RESPONSIVE
-===================== */
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
+/* =========================================
+   Seamless Logo Loop Animation
+========================================= */
+@keyframes logoLoop {
+  0% {
+    transform: translateX(0);
   }
-
-  .hero h1 {
-    font-size: 48px;
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 40px;
-  }
+.animate-logoLoop {
+  animation: logoLoop linear infinite;
+}
 
-  section,
-  .section {
-    padding: 100px 20px;
+/* =========================================
+   Wave Draw Animation
+========================================= */
+@keyframes drawWave {
+  0% {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+  }
+  100% {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw {
+  animation: drawWave 2.5s ease-out forwards;
+}
+
+/* =========================================
+   Scroll Indicator Animation
+========================================= */
+@keyframes scrollDot {
+  0% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+}
+
+.animate-scroll {
+  animation: scrollDot 1.3s ease-in-out infinite;
+}
+
+/* =========================================
+   Reduce Motion Accessibility
+========================================= */
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll,
+  .animate-draw,
+  .animate-logoLoop {
+    animation: none;
   }
 }

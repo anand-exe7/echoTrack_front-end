@@ -4,12 +4,12 @@ export default function WhyEchoTrack() {
   const reasons = [
     {
       tag: "NO NOISE",
-      title: "Not social media",
+      title: "Not built for attention",
       desc: "There are no likes, followers, or feeds here. EchoTrack exists only for you — not an audience.",
     },
     {
       tag: "NO PRESSURE",
-      title: "Consistency without streaks",
+      title: "Consistency without punishment",
       desc: "Missed days don’t erase progress. Growth isn’t fragile, and it doesn’t reset.",
     },
     {
@@ -20,13 +20,42 @@ export default function WhyEchoTrack() {
   ];
 
   return (
-    <section id="why" style={styles.section}>
+    <section id="why" className="py-32 px-[8%]">
       {/* Header */}
-      <div style={styles.header}>
-        <h2 style={styles.title}>Why EchoTrack exists</h2>
-        <div style={styles.titleUnderline} />
+      <div className="max-w-[720px] mb-16">
 
-        <p style={styles.subtitle}>
+        {/* Softer Gradient Heading */}
+        <h2
+          className="
+            text-[clamp(2.4rem,4vw,3rem)]
+            font-bold
+            leading-[1.2]
+            mb-4
+            bg-gradient-to-br
+            from-purple-500
+            via-indigo-500
+            to-purple-400
+            bg-clip-text
+            text-transparent
+          "
+        >
+          Why EchoTrack exists
+        </h2>
+
+        {/* Softer Accent Line */}
+        <div
+          className="
+            w-[44px] h-[3px]
+            rounded-full
+            bg-gradient-to-br
+            from-indigo-500
+            to-purple-600
+            opacity-80
+            mb-6
+          "
+        />
+
+        <p className="text-[1.05rem] text-slate-600 leading-7">
           Most tools push you to perform.
           <br />
           EchoTrack is built to help you notice.
@@ -34,33 +63,77 @@ export default function WhyEchoTrack() {
       </div>
 
       {/* Cards */}
-      <div style={styles.grid}>
+      <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {reasons.map((item, i) => (
           <motion.div
             key={i}
-            style={styles.card}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ y: -10 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            whileHover={{ y: -2, scale: 1.04 }}
+            transition={{ duration: 0.2 }}
             viewport={{ once: true }}
+            className="
+              p-10
+              rounded-2xl
+              border border-indigo-100/70
+              bg-white/85
+              backdrop-blur-lg
+              shadow-[0_18px_40px_-15px_rgba(99,102,241,0.15)]
+              transition-all duration-200
+            "
           >
-            <span style={styles.tag}>{item.tag}</span>
-            <h3 style={styles.cardTitle}>{item.title}</h3>
-            <p style={styles.cardDesc}>{item.desc}</p>
+            {/* Tag (Softer gradient) */}
+            <span
+              className="
+                inline-block
+                text-[0.7rem]
+                tracking-[0.15em]
+                font-semibold
+                px-4 py-1.5
+                rounded-full
+                mb-5
+                bg-gradient-to-b
+                from-indigo-600
+                to-purple-500
+                text-white
+                opacity-90
+              "
+            >
+              {item.tag}
+            </span>
+
+            {/* Card Title (Subtle gradient) */}
+            <h3
+              className="
+                text-[1.3rem]
+                font-semibold
+                mb-4
+                bg-gradient-to-r
+                from-indigo-500
+                to-purple-500
+                bg-clip-text
+                text-transparent
+              "
+            >
+              {item.title}
+            </h3>
+
+            <p className="text-[0.98rem] text-slate-600 leading-7">
+              {item.desc}
+            </p>
           </motion.div>
         ))}
       </div>
 
       {/* Quote */}
       <motion.div
-        style={styles.quote}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.6 }}
         viewport={{ once: true }}
+        className="mt-24 text-center text-[1.1rem] text-slate-600"
       >
-        <p>
+        <p className="italic opacity-90">
           “Progress doesn’t need applause.
           <br />
           It needs space.”
@@ -69,84 +142,3 @@ export default function WhyEchoTrack() {
     </section>
   );
 }
-
-const styles = {
-  section: {
-    padding: "160px 8%",
-    background:
-      "linear-gradient(180deg, rgba(78,84,200,0.06) 0%, rgba(255,255,255,0) 100%)",
-  },
-
-  header: {
-    maxWidth: "680px",
-    marginBottom: "90px",
-  },
-
-  title: {
-    fontSize: "clamp(2.3rem, 4vw, 3rem)",
-    fontWeight: 700,
-    color: "#4E54C8",
-    marginBottom: "14px",
-  },
-
-  titleUnderline: {
-    width: "42px",
-    height: "4px",
-    background: "#4E54C8",
-    borderRadius: "999px",
-    marginBottom: "22px",
-  },
-
-  subtitle: {
-    fontSize: "1.1rem",
-    color: "#64748b",
-    lineHeight: 1.7,
-  },
-
-  grid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-    gap: "36px",
-  },
-
-  card: {
-    padding: "42px 36px",
-    background: "rgba(255,255,255,0.92)",
-    backdropFilter: "blur(14px)",
-    borderRadius: "22px",
-    boxShadow: "0 24px 60px rgba(15,23,42,0.08)",
-  },
-
-  tag: {
-    display: "inline-block",
-    fontSize: "0.7rem",
-    letterSpacing: "0.12em",
-    fontWeight: 600,
-    color: "#4E54C8",
-    background: "rgba(78,84,200,0.1)",
-    padding: "6px 14px",
-    borderRadius: "999px",
-    marginBottom: "18px",
-  },
-
-  cardTitle: {
-    fontSize: "1.35rem",
-    fontWeight: 600,
-    color: "#020617",
-    marginBottom: "14px",
-  },
-
-  cardDesc: {
-    fontSize: "0.98rem",
-    color: "#475569",
-    lineHeight: 1.7,
-  },
-
-  quote: {
-    marginTop: "120px",
-    textAlign: "center",
-    fontSize: "1.15rem",
-    color: "#475569",
-    opacity: 0.85,
-  },
-};

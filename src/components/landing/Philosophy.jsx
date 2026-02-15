@@ -1,63 +1,32 @@
 export default function Philosophy() {
   return (
-    <section style={styles.section}>
-      <div style={styles.container}>
-        <h2 style={styles.heading}>
-          Growth is not content.
-        </h2>
+    <section
+      className="py-24 px-[10%] text-center"
+    >
+      <div className="max-w-[820px] mx-auto">
 
-        <p style={styles.subheading}>
+        <h1 className="text-[2.6rem] font-bold mb-2
+                       bg-gradient-to-r from-purple-600 via-indigo-500 to-purple-600
+                       bg-clip-text text-transparent">
+          Growth is not content.
+        </h1>
+
+        <p className="text-[1.1rem] text-gray-600 mb-8">
           It doesn’t need likes, streaks, or validation.
         </p>
 
-        <div style={styles.divider} />
+        <div className="w-[60px] h-[4px] bg-gradient-to-br from-indigo-600 to-purple-400 rounded-full mx-auto mb-8" />
 
-        <p style={styles.body}>
+        <p className="text-[1.05rem] leading-8 text-gray-700">
           EchoTrack is built for people who care about becoming better —
           not being seen.
-          <br />
-          <br />
+          <br /><br />
           Some days are quiet. Some weeks are uneven.
           <br />
           Progress still happens.
         </p>
+
       </div>
     </section>
   );
 }
-
-const styles = {
-  section: {
-    padding: "6rem 10%",
-    background:
-      "linear-gradient(180deg, #F8F9FD 0%, #EEF0FF 100%)",
-    textAlign: "center",
-  },
-  container: {
-    maxWidth: "820px",
-    margin: "0 auto",
-  },
-  heading: {
-    fontSize: "2.6rem",
-    fontWeight: 700,
-    color: "#4E54C8",
-    marginBottom: "0.6rem",
-  },
-  subheading: {
-    fontSize: "1.1rem",
-    color: "#666",
-    marginBottom: "2rem",
-  },
-  divider: {
-    width: "60px",
-    height: "4px",
-    background: "#6C6FF5",
-    borderRadius: "999px",
-    margin: "0 auto 2rem",
-  },
-  body: {
-    fontSize: "1.05rem",
-    lineHeight: 1.8,
-    color: "#444",
-  },
-};
