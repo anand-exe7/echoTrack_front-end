@@ -8,15 +8,15 @@ export default function BadgesSection({ badges }) {
   const visibleBadges = isExpanded ? badges : badges.slice(0, 4);
 
   return (
-    <div className="bg-white p-8 rounded-3xl border border-indigo-100 shadow-sm relative">
+    <div className="bg-white p-8 rounded-3xl border border-[#90A955]/20 shadow-sm relative">
       <div className="flex justify-between items-center mb-8">
-        <h3 className="text-2xl font-bold text-indigo-900 flex items-center gap-2">
+        <h3 className="text-2xl font-bold text-[#132A13] flex items-center gap-2">
           🏅 Achievements
         </h3>
         {/* Toggle Button using Three Lines (Hamburger Icon) */}
         <button 
           onClick={() => setIsExpanded(!isExpanded)}
-          className="p-2 hover:bg-indigo-50 rounded-xl transition-colors text-indigo-600"
+          className="p-2 hover:bg-[#90A955]/10 rounded-xl transition-colors text-[#4F772D]"
           title={isExpanded ? "Collapse" : "Expand All"}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -32,18 +32,18 @@ export default function BadgesSection({ badges }) {
       </div>
 
       {selectedBadge && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-indigo-900/20 backdrop-blur-md">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-[#31572C]/20 backdrop-blur-md">
           <div className="bg-white p-8 rounded-3xl shadow-2xl max-w-sm w-full text-center">
             <div className="text-6xl mb-4">{selectedBadge.icon}</div>
-            <h3 className="text-2xl font-black text-indigo-900">{selectedBadge.title}</h3>
-            <div className="mt-4 p-4 bg-indigo-50 rounded-2xl">
-              <p className="text-sm text-indigo-700 font-medium">
+            <h3 className="text-2xl font-black text-[#132A13]">{selectedBadge.title}</h3>
+            <div className="mt-4 p-4 bg-[#90A955]/10 rounded-2xl">
+              <p className="text-sm text-[#4F772D] font-medium">
                 {selectedBadge.earned 
                   ? `Awarded on ${selectedBadge.date}` 
                   : `Unlock: ${selectedBadge.requirement}`}
               </p>
             </div>
-            <button onClick={() => setSelectedBadge(null)} className="mt-6 w-full py-3 bg-indigo-600 text-white rounded-xl font-bold">Close</button>
+            <button onClick={() => setSelectedBadge(null)} className="mt-6 w-full py-3 bg-gradient-to-r from-[#4F772D] to-[#90A955] text-white rounded-xl font-bold hover:from-[#31572C] hover:to-[#4F772D] transition-all">Close</button>
           </div>
         </div>
       )}
