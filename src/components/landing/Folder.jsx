@@ -27,7 +27,7 @@ const darkenColor = (hex, percent) => {
 };
 
 const Folder = ({
-  color = "#6366F1",
+  color = "#90A955",
   size = 1,
   className = "",
 }) => {
@@ -102,7 +102,7 @@ const Folder = ({
         <div
           className="relative w-[120px] h-[90px] rounded-tr-[12px] rounded-br-[12px] rounded-bl-[12px]"
           style={{
-            background: `linear-gradient(135deg, ${color}, #A855F7)`
+            background: `linear-gradient(135deg, ${color}, #90A955)`
           }}
         >
           {/* Floating shadow */}
