@@ -38,24 +38,16 @@ export default function Hero() {
       className="min-h-screen pt-32 px-8 max-w-7xl mx-auto relative overflow-hidden"
     >
 
+            <div className="absolute top-10 left-5 w-56 h-56 bg-[#4F772D]/3 rounded-full blur-3xl opacity-30 pointer-events-none animate-pulse" />
       
-      {/* SUBTLE BACKGROUND DECORATIVE ELEMENTS */}
-      
-      {/* Floating circles - Top left */}
-      <div className="absolute top-10 left-5 w-56 h-56 bg-[#4F772D]/3 rounded-full blur-3xl opacity-30 pointer-events-none animate-pulse" />
-      
-      {/* Floating circles - Bottom right */}
       <div className="absolute bottom-32 right-5 w-64 h-64 bg-[#90A955]/3 rounded-full blur-3xl opacity-30 pointer-events-none animate-pulse" style={{ animationDelay: '1s' }} />
       
-      {/* Small accent dots - scattered */}
       <div className="absolute top-24 left-1/4 w-2 h-2 bg-[#4F772D]/20 rounded-full opacity-40 pointer-events-none" />
       <div className="absolute top-40 right-20 w-3 h-3 bg-[#90A955]/15 rounded-full opacity-30 pointer-events-none" />
       <div className="absolute bottom-40 left-12 w-2.5 h-2.5 bg-[#31572C]/25 rounded-full opacity-35 pointer-events-none" />
       
-      {/* Subtle gradient line accent - left side */}
       <div className="absolute left-0 top-1/3 w-1 h-32 bg-gradient-to-b from-[#4F772D]/10 via-[#4F772D]/5 to-transparent pointer-events-none" />
       
-      {/* Subtle gradient line accent - right side */}
       <div className="absolute right-0 bottom-1/3 w-1 h-40 bg-gradient-to-t from-[#90A955]/10 via-[#90A955]/5 to-transparent pointer-events-none" />
 
       <div className="grid md:grid-cols-2 gap-20 items-center relative z-10">
@@ -116,11 +108,7 @@ export default function Hero() {
               </motion.div>
             </motion.button>
           </div>
-
-          {/* STATS SECTION */}
           
-
-          {/* Small accent divider */}
           <div className="mt-10 flex items-center gap-4 opacity-50">
             <div className="h-px flex-1 bg-gradient-to-r from-[#4F772D]/30 to-transparent" />
           </div>
@@ -191,7 +179,6 @@ export default function Hero() {
               Small effort, repeated calmly, compounds into meaningful growth.
             </p>
 
-            {/* INTERACTIVE PROGRESS INDICATOR */}
             <div className="mb-6 space-y-3">
               {["Consistency", "Awareness", "Progress"].map((label, i) => (
                 <motion.div
@@ -218,7 +205,6 @@ export default function Hero() {
               ))}
             </div>
 
-            {/* ANIMATED CHART */}
             <motion.div
               className="
                 mt-4 h-[150px] rounded-2xl p-6
@@ -246,7 +232,6 @@ export default function Hero() {
                   transition={{ duration: 2, ease: "easeInOut" }}
                   viewport={{ once: true }}
                 />
-                {/* Animated dots on line */}
                 {[0.25, 0.5, 0.75].map((pos, i) => (
                   <motion.circle
                     key={i}
@@ -266,7 +251,6 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* FLOATING BADGE */}
           <motion.div
             className="absolute -bottom-6 -right-6 px-6 py-3 rounded-2xl bg-white shadow-lg border border-[#ECF39E]"
             animate={{ y: [0, -10, 0] }}

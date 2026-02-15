@@ -1,6 +1,6 @@
 const gradientMapping = {
-  indigo: "linear-gradient(135deg,#6366f1,#4f46e5)",
-  violet: "linear-gradient(135deg,#8b5cf6,#7c3aed)",
+  indigo: "linear-gradient(135deg,#4F772D,#31572C)",
+  violet: "linear-gradient(135deg,#90A955,#4F772D)",
 };
 
 const GlassIcons = ({ items }) => {
@@ -39,7 +39,7 @@ const GlassIcons = ({ items }) => {
               bg-white/70 backdrop-blur-[0.8em]
               border border-white/40
               flex items-center justify-center
-              text-indigo-500 text-[1.6em]
+              text-[#4F772D] text-[1.6em]
               transition-all duration-300 ease-[cubic-bezier(0.83,0,0.17,1)]
               group-hover:text-white
               group-hover:[transform:translate3d(0,0,2em)]"

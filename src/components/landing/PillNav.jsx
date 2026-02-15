@@ -54,7 +54,7 @@ const PillNav = ({ logoText, items, activeHref }) => {
 
         {/* LEFT — LOGO */}
         <div className="text-xl font-bold tracking-wide">
-          <span className="bg-gradient-to-r from-purple-500 via-indigo-500 to-violet-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#4F772D] via-[#90A955] to-[#31572C] bg-clip-text text-transparent">
             {logoText}
           </span>
         </div>
@@ -73,14 +73,14 @@ const PillNav = ({ logoText, items, activeHref }) => {
                     onMouseLeave={() => handleLeave(i)}
                     className={`relative px-5 py-2 rounded-full text-sm font-semibold overflow-hidden transition-colors duration-300 ${
                       isActive
-                        ? "text-indigo-600"
+                        ? "text-[#4F772D]"
                         : "text-slate-700"
                     }`}
                   >
                     {/* Hover circle */}
                     <span
                       ref={el => (circleRefs.current[i] = el)}
-                      className="absolute left-1/2 bottom-0 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500"
+                      className="absolute left-1/2 bottom-0 rounded-full bg-gradient-to-r from-[#4F772D] to-[#90A955]"
                     />
 
                     <span className="relative z-10">
@@ -97,14 +97,14 @@ const PillNav = ({ logoText, items, activeHref }) => {
         <div className="hidden md:flex items-center gap-4">
 
           {/* Login */}
-          <button className="text-sm font-semibold text-slate-700 hover:text-indigo-600 transition-colors duration-300">
+          <button className="text-sm font-semibold text-slate-700 hover:text-[#4F772D] transition-colors duration-300">
             Login
           </button>
 
           {/* Signup */}
           <button className="px-6 py-2 rounded-full text-white text-sm font-semibold
-            bg-gradient-to-r from-indigo-500 to-purple-500
-            hover:from-indigo-600 hover:to-purple-600
+            bg-gradient-to-r from-[#4F772D] to-[#90A955]
+            hover:from-[#31572C] hover:to-[#4F772D]
             transition-all duration-300 shadow-md hover:shadow-lg">
             Sign Up
           </button>

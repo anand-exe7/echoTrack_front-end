@@ -17,8 +17,8 @@ body {
   min-height: 100vh;
   position: relative;
 
-  /* Lavender base */
-  background-color: #F6F4FF;
+  /* Green base */
+  background-color: #F5F8E8;
 }
 
 /* =========================================
@@ -32,8 +32,8 @@ body::before {
   pointer-events: none;
 
   background-image:
-    linear-gradient(rgba(124, 58, 237, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(124, 58, 237, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(79, 119, 45, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 119, 45, 0.08) 1px, transparent 1px);
 
   background-size: 32px 32px;
 }

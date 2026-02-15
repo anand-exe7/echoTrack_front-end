@@ -4,10 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#4e54c8",
-        lavender: {
-          soft: "#a5b4fc",
-          secondary: "#6c6ff5",
+        primary: "#4F772D",
+        echoGreen: {
+          darkest: "#132A13",
+          dark: "#31572C",
+          medium: "#4F772D",
+          light: "#90A955",
+          lightest: "#ECF39E",
         },
       },
       fontFamily: {

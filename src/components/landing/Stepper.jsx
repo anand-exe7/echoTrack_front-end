@@ -50,10 +50,10 @@ export default function Stepper() {
         max-w-3xl
         mx-auto
         rounded-3xl
-        border border-indigo-100
-        bg-gradient-to-b from-white to-indigo-50/40
+        border border-[#ECF39E]
+        bg-gradient-to-b from-white to-[#F5F8E8]
         backdrop-blur-md
-        shadow-[0_20px_50px_-10px_rgba(99,102,241,0.15)]
+        shadow-[0_20px_50px_-10px_rgba(79,119,45,0.15)]
         px-10 py-10
       "
     >
@@ -74,9 +74,9 @@ export default function Stepper() {
                 shadow-md
                 ${
                   index === current
-                    ? "bg-gradient-to-br from-indigo-600 to-purple-500 text-white shadow-indigo-300/40"
+                    ? "bg-gradient-to-br from-[#4F772D] to-[#31572C] text-white shadow-[#90A955]/40"
                     : index < current
-                    ? "bg-gradient-to-br from-indigo-500 to-purple-400 text-white shadow-indigo-200/30"
+                    ? "bg-gradient-to-br from-[#90A955] to-[#4F772D] text-white shadow-[#90A955]/30"
                     : "bg-white text-slate-500 border border-slate-200"
                 }
               `}
@@ -103,8 +103,8 @@ export default function Stepper() {
             font-semibold
             mb-4
             bg-gradient-to-r
-            from-indigo-600
-            to-purple-500
+            from-[#4F772D]
+            to-[#31572C]
             bg-clip-text
             text-transparent
           "
@@ -141,8 +141,8 @@ export default function Stepper() {
             px-6 py-2.5
             rounded-full
             bg-gradient-to-br
-            from-indigo-600
-            to-purple-500
+            from-[#4F772D]
+            to-[#31572C]
             text-white
             font-medium
             shadow-md
