@@ -6,7 +6,7 @@ export default function SuccessMessage() {
       <div
         className="px-6 py-3 rounded-full shadow-2xl transform"
         style={{
-          background: 'linear-gradient(135deg, #667EEA 0%, #764BA2 100%)',
+          background: 'linear-gradient(135deg, #4F772D 0%, #90A955 100%)',
           animation: 'slideDown 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
         }}
       >

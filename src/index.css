@@ -4,16 +4,16 @@
 
 @layer components {
   .navbar {
-    @apply sticky top-0 z-50 w-full border-b border-[#4F772D]/20 bg-white/80 backdrop-blur-md px-6 py-4;
+    @apply sticky top-0 z-50 w-full border-b border-eco-medium/20 bg-eco-lightest/80 backdrop-blur-md px-6 py-4;
   }
   .nav-container { @apply max-w-7xl mx-auto flex items-center justify-between; }
-  .nav-logo { @apply text-xl font-black bg-gradient-to-bl from-[#4F772D] to-[#31572C] bg-clip-text text-transparent uppercase tracking-tighter; }
+  .nav-logo { @apply text-xl font-black bg-gradient-to-bl from-eco-medium to-eco-dark-green bg-clip-text text-transparent uppercase tracking-tighter; }
   .nav-links { @apply hidden md:flex items-center gap-8; }
-  .nav-links button { @apply text-sm font-semibold text-slate-500 hover:text-[#4F772D] transition-all; }
-  .nav-links button.active { @apply text-[#4F772D] border-b-2 border-[#4F772D]; }
-  .nav-cta { @apply bg-gradient-to-r from-[#4F772D] to-[#90A955] hover:from-[#31572C] hover:to-[#4F772D] text-white text-sm font-bold px-5 py-2 rounded-full; }
+  .nav-links button { @apply text-sm font-semibold text-eco-dark-green hover:text-eco-medium transition-all; }
+  .nav-links button.active { @apply text-eco-medium border-b-2 border-eco-medium; }
+  .nav-cta { @apply bg-gradient-to-r from-eco-medium to-eco-light hover:from-eco-dark-green hover:to-eco-medium text-white text-sm font-bold px-5 py-2 rounded-full; }
 }
 
 body {
-  @apply bg-[#F8FAF5] text-slate-800 antialiased;
+  @apply bg-eco-lightest text-eco-dark-green antialiased;
 }

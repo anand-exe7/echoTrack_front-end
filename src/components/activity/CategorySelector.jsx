@@ -16,18 +16,18 @@ export default function CategorySelector({ categories, selectedCategory, onSelec
           style={
             selectedCategory === category.name
               ? {
-                  backgroundColor: 'rgba(255, 255, 255, 0.4)',
-                  border: '2px solid rgba(255, 255, 255, 0.6)',
-                  boxShadow: '0 4px 15px rgba(255, 255, 255, 0.3)',
+                  backgroundColor: '#90A955',
+                  border: '2px solid #4F772D',
+                  boxShadow: '0 4px 15px rgba(79, 119, 45, 0.3)',
                 }
               : {
-                  backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                  border: '2px solid rgba(255, 255, 255, 0.3)',
+                  backgroundColor: 'rgba(236, 243, 158, 0.3)',
+                  border: '2px solid rgba(144, 169, 85, 0.4)',
                 }
           }
         >
           <span className="text-3xl">{category.emoji}</span>
-          <span className="text-xs font-semibold text-white text-center leading-tight">
+          <span className="text-xs font-semibold text-eco-dark text-center leading-tight">
             {category.name}
           </span>
         </button>
