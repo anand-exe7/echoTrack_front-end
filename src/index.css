@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-indigo-950: #1e1b4b;
+}
+
+:root {
+  background-color: #f4f5ff;
+}
